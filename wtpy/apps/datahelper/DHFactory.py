@@ -21,5 +21,8 @@ class DHFactory:
         elif name == "tqsdk":
             from wtpy.apps.datahelper.DHTqSdk import DHTqSdk
             return DHTqSdk()
+        elif name == "qmtsdk":
+            from wtpy.apps.datahelper.DHQmtSdk import DHQmtSdk
+            return DHQmtSdk()
         else:
             raise Exception("Cannot recognize helper with name %s" % (name))
